@@ -1,6 +1,6 @@
 import PokemonCard from './PokemonCard';
 
-function PokemonList({ pokemons, favorites, onToggleFavorite }) {
+function PokemonList({ pokemons, favorites, blockedPokemons, onToggleFavorite, onToggleBlock }) {
   if (pokemons.length === 0) {
     return <p className="empty-message">No se encontraron pokémon.</p>;
   }
@@ -12,7 +12,9 @@ function PokemonList({ pokemons, favorites, onToggleFavorite }) {
           key={pokemon.name}
           pokemon={pokemon}
           isFavorite={favorites.some((fav) => fav.name === pokemon.name)}
+          isBlocked={blockedPokemons.some((blocked) => blocked.name === pokemon.name)}
           onToggleFavorite={onToggleFavorite}
+          onToggleBlock={onToggleBlock}
         />
       ))}
     </div>
