@@ -14,6 +14,7 @@ const BLOCKED_STORAGE_KEY = 'pokemon-blocked';
 function App() {
   const { data, loading, error } = useFetch(API_URL);
   const [searchTerm, setSearchTerm] = useState('');
+  const [showPanels, setShowPanels] = useState(true);
   const [favorites, setFavorites] = useState(() => {
     if (typeof window === 'undefined') return [];
 
@@ -91,7 +92,16 @@ function App() {
       <div className="layout">
         <main className="main-content">
           {!loading && !error && (
-            <SearchBar value={searchTerm} onChange={setSearchTerm} />
+            <div className="toolbar">
+              <SearchBar value={searchTerm} onChange={setSearchTerm} />
+              <button
+                className="toggle-panels-btn"
+                onClick={() => setShowPanels((prev) => !prev)}
+                aria-label={showPanels ? 'Ocultar paneles' : 'Mostrar paneles'}
+              >
+                {showPanels ? 'Ocultar paneles' : 'Mostrar paneles'}
+              </button>
+            </div>
           )}
 
           {loading && <p className="status-message">Cargando pokémon...</p>}
@@ -112,7 +122,7 @@ function App() {
           )}
         </main>
 
-        <aside className="sidebar">
+        <aside className={`sidebar ${showPanels ? 'show' : 'hidden'}`}>
           <FavoritesPanel
             favorites={favorites}
             onToggleFavorite={handleToggleFavorite}
