@@ -1,3 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f9;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #cc0000;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.integrantes {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
 .pokemon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -43,4 +78,25 @@
   text-align: center;
   color: #666;
   padding: 2rem;
+}
+
+.search-bar {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.7rem 1rem;
+  border: 2px solid #cc0000;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.15s ease;
+}
+
+.search-bar input:focus {
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.2);
 }
