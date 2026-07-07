@@ -24,6 +24,7 @@ function App() {
       return [];
     }
   });
+
   const [blockedPokemons, setBlockedPokemons] = useState(() => {
     if (typeof window === 'undefined') return [];
 
@@ -74,7 +75,9 @@ function App() {
     const isBlocked = blockedPokemons.some((blocked) => blocked.name === pokemon.name);
 
     if (isBlocked) {
-      setBlockedPokemons((prev) => prev.filter((blocked) => blocked.name !== pokemon.name));
+      setBlockedPokemons((prev) =>
+        prev.filter((blocked) => blocked.name !== pokemon.name)
+      );
       return;
     }
 
@@ -97,6 +100,7 @@ function App() {
               Ocurrió un error al cargar los datos: {error}
             </p>
           )}
+
           {!loading && !error && (
             <PokemonList
               pokemons={filteredPokemons}
