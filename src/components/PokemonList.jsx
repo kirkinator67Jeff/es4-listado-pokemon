@@ -1,6 +1,6 @@
 import PokemonCard from './PokemonCard';
 
-function PokemonList({ pokemons }) {
+function PokemonList({ pokemons, favorites, onToggleFavorite }) {
   if (pokemons.length === 0) {
     return <p className="empty-message">No se encontraron pokémon.</p>;
   }
@@ -8,7 +8,12 @@ function PokemonList({ pokemons }) {
   return (
     <div className="pokemon-grid">
       {pokemons.map((pokemon) => (
-        <PokemonCard key={pokemon.name} pokemon={pokemon} />
+        <PokemonCard
+          key={pokemon.name}
+          pokemon={pokemon}
+          isFavorite={favorites.some((fav) => fav.name === pokemon.name)}
+          onToggleFavorite={onToggleFavorite}
+        />
       ))}
     </div>
   );

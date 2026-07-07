@@ -100,3 +100,88 @@ body {
 .search-bar input:focus {
   box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.2);
 }
+
+.layout {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 0 1rem;
+}
+
+.main-content {
+  flex: 3;
+  padding: 1rem 0;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #ccc;
+  line-height: 1;
+}
+
+.favorite-btn.active {
+  color: #f5c518;
+}
+
+.pokemon-card {
+  position: relative;
+}
+
+.favorites-panel {
+  flex: 1;
+  min-width: 220px;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 1rem;
+}
+
+.favorites-panel h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+.favorites-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f4f4f9;
+  border-radius: 6px;
+  padding: 0.4rem;
+}
+
+.favorite-item img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.favorite-item span {
+  flex: 1;
+  text-transform: capitalize;
+  font-size: 0.85rem;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #cc0000;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
