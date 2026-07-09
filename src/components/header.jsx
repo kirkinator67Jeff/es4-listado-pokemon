@@ -1,4 +1,4 @@
-function Header() {
+function header() {
   return (
     <header className="header">
       <h1>Pokedex Interactiva </h1>
@@ -9,4 +9,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default header;
