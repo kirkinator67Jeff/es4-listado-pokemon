@@ -1,4 +1,4 @@
-import { getIdFromUrl, getPokemonImage } from '../utils/pokemonHelpers';
+import { getIdFromUrl, getPokemonImage } from '../utils/PokemonHelpers';
 
 function BlockedPanel({ blockedPokemons, onToggleBlock }) {
   return (

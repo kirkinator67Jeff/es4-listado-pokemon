@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import header from './components/header';
+import Header from './components/header';
 import SearchBar from './components/SearchBar';
 import PokemonList from './components/PokemonList';
 import FavoritesPanel from './components/FavoritesPanel';
