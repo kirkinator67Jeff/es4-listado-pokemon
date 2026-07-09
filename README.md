@@ -9,7 +9,7 @@ Aplicación web desarrollada con React que permite explorar un listado de varios
 
 ## Demo en línea
 
-[Ver aplicación desplegada](https://taller-react-pokeapi.vercel.app)
+[Ver aplicación desplegada](https://es4-listado-pokemon.vercel.app/)
 
 ## Funcionalidades
 
