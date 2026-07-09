@@ -1,16 +1,31 @@
-# React + Vite
+# Pokedex Interactiva
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación web desarrollada con React que permite explorar un listado de varios Pokémon desde [PokeAPI](https://pokeapi.co), con funcionalidades de búsqueda, favoritos y bloqueo de elementos
 
-Currently, two official plugins are available:
+## Integrantes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Andru Colque
+- Nicolás Pérez
 
-## React Compiler
+## Demo en línea
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Ver aplicación desplegada](https://taller-react-pokeapi.vercel.app)
 
-## Expanding the Oxlint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Listado de Pokémon con imágenes obtenidas desde PokeAPI
+- Barra de búsqueda con filtrado en tiempo real (sin distinguir mayúsculas/minúsculas)
+- Marcar y quitar favoritos, visibles en un panel lateral
+- Bloquear y desbloquear elementos (se excluyen automáticamente de las búsquedas)
+- Estadísticas de totales, favoritos y bloqueados
+- Persistencia de favoritos y bloqueados en `localStorage`
+- Diseño responsivo (móvil, tablet y escritorio)
+- Manejo de estados de carga y error al consumir la API
+
+## Tecnologías utilizadas
+
+- [React](https://react.dev) (componentes funcionales + hooks)
+- [Vite](https://vitejs.dev) como bundler
+- CSS puro para el diseño responsivo
+- [PokeAPI](https://pokeapi.co) como fuente de datos
+- Despliegue en [Vercel](https://vercel.com)
